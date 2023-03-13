@@ -1,0 +1,139 @@
+<html>
+
+<head>
+  <title>A Syntax for Resource Composition</title>
+
+  <style>
+    table.blueTable {
+      border: 1px solid #1C6EA4;
+      background-color: #EEEEEE;
+      width: 100%;
+      text-align: left;
+      border-collapse: collapse;
+    }
+
+    table.blueTable td,
+    table.blueTable th {
+      border: 1px solid #AAAAAA;
+      padding: 3px 2px;
+    }
+
+    table.blueTable tbody td {
+      font-size: 13px;
+    }
+
+    table.blueTable tr:nth-child(even) {
+      background: #D0E4F5;
+    }
+
+    table.blueTable thead {
+      background: #1C6EA4;
+      background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+      background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+      background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+      border-bottom: 2px solid #444444;
+    }
+
+    table.blueTable thead th {
+      font-size: 15px;
+      font-weight: bold;
+      color: #FFFFFF;
+      border-left: 2px solid #D0E4F5;
+    }
+
+    table.blueTable thead th:first-child {
+      border-left: none;
+    }
+
+    table.blueTable tfoot {
+      font-size: 14px;
+      font-weight: bold;
+      color: #FFFFFF;
+      background: #D0E4F5;
+      background: -moz-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+      background: -webkit-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+      background: linear-gradient(to bottom, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+      border-top: 2px solid #444444;
+    }
+
+    table.blueTable tfoot td {
+      font-size: 14px;
+    }
+
+    table.blueTable tfoot .links {
+      text-align: right;
+    }
+
+    table.blueTable tfoot .links a {
+      display: inline-block;
+      background: #1C6EA4;
+      color: #FFFFFF;
+      padding: 2px 8px;
+      border-radius: 5px;
+    }
+  </style>
+
+</head>
+
+<link rel="stylesheet" href="jquery-ui.min.css">
+<link rel="stylesheet" href="jquery-ui.structure.min.css">
+<link rel="stylesheet" href="jquery-ui.theme.min.css">
+<link rel="stylesheet" href="theme.min.css">
+<script src="jquery-3.6.0.js"></script>
+<script type="text/javascript" src="jquery-ui.min.js"></script>
+<script src="d3.v7.min.js"></script>
+<script src="negotiate.js"></script>
+
+
+
+<body>
+
+  <h1>A Syntax for Resource Composition</h1>
+
+  <h1>Syntax</h1>
+
+  <img src="lang.png" style="display: block;
+  margin-left: auto;
+  max-width: 600px;
+  margin-right: auto;
+  width: 40%;"/>
+
+
+  <h2>Test Configuration</h2>
+
+  Number of nodes :
+  <input type="text" id="nnode" readonly style="border:0; color:#f6931f; font-weight:bold;">
+  <br><br>
+  <div id="slidern"></div>
+
+  Numa per node :
+  <input type="text" id="nnuma" readonly style="border:0; color:#f6931f; font-weight:bold;">
+  <br><br>
+  <div id="slidernu"></div>
+
+
+  Slot per Numa :
+  <input type="text" id="nslot" readonly style="border:0; color:#f6931f; font-weight:bold;">
+  <br><br>
+  <div id="slidersl"></div>
+
+  <h2>Split configuration</h2>
+
+  <input type="text" id="balance" value="A">
+  (comma separated list)
+  <br>
+  <div id="syntax" style="border:0; color:#FF0000; font-weight:bold;"></div>
+
+  <h2>Job Summary</h2>
+
+  <div id="summary" v></div>
+
+  <h2>Job Preview</h2>
+
+  <div id="view" style="width:50%; margin: 0 auto;"></div>
+
+</body>
+
+
+
+</html>
